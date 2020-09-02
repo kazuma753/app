@@ -1,0 +1,13 @@
+<section = class="edit clearfix">
+<h1>Editing Book</h1>
+<%= form_for(@book, url:"/books/#{@book.id}") do |f| %>
+  <h4>title</h4>
+  <%= f.text_field :title %>
+  <h4>Body</h4>
+  <%= f.text_area :body %>
+ 
+  <div class="edit-item"><%= f.submit 'Update Book' %></div>
+  <div class="edit-item1"><%= link_to "Show",book_path(@book) %> | 
+ <%= link_to "Back",books_path %></div>
+<% end %>
+</section>
